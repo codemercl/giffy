@@ -10,5 +10,6 @@ export interface GifData {
 
 export interface IState {
   searchList: GifData[]
+  searchObject: GifData | null;
   searchText: string | null
 }

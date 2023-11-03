@@ -5,6 +5,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow-y: hidden;
+
   .container {
     display: flex;
     justify-content: center;
@@ -13,10 +15,15 @@
 
     .images {
       max-width: 18.75rem;
+      overflow: hidden;
+      height: 100%;
+      cursor: pointer;
+      pointer-events: none;
+    
       img {
         display: block;
         max-width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: cover;
       }
     }

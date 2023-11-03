@@ -1,4 +1,4 @@
-interface TypesUser {
+export interface TypesUser {
   avatar_url: string
   display_name: string
   username: string
@@ -19,10 +19,10 @@ export interface CartData {
   embed_url: string
   images: TypesImages
   username: string
-  user: TypesUser
+  user: TypesUser | null;
 }
 
 export interface IState {
-  getById: CartData[]
+  getById: CartData | null
   paramId: string | null
 }

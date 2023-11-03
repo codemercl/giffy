@@ -6,12 +6,16 @@ interface State extends IState {}
 
 const state: State = {
   searchList: [],
+  searchObject: null,
   searchText: ''
 }
 
 const mutations = {
   setDataList(state: State, data: GifData[]) {
-    state.searchList = data
+    state.searchList = data;
+  },
+  setDataObject(state: State, data: GifData) {
+    state.searchObject = data;
   },
   setSearchText(state: State, text: string) {
     state.searchText = text
@@ -32,7 +36,7 @@ const actions = {
       const tag = "Not Found"
       if (data.length === 0) {
         const randomData = await getRandomGifData(apiKey,tag, rating );
-        commit('setDataList', randomData);
+        commit('setDataObject', randomData);
       }
     } catch (error) {
       // console.error('An error occurred while executing the request:', error)

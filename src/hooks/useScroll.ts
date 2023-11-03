@@ -34,11 +34,7 @@ export function useScroll(
       try {
         const searchText = getRandomWord();
         const data = await searchGifData(searchText, apiKey, lang, rating, offset, limit);
-        if (Array.isArray(searchList.value)) {
-            searchList.value.push(...data);
-          } else {
-            searchList.value = [...data];
-          }
+        searchList?.value?.push(...data);
       } catch (error) {
         console.error('Error executing request:', error);
       }

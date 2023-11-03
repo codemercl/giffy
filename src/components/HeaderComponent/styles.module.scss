@@ -5,6 +5,23 @@
   gap: 2rem;
 }
 
+.share-button {
+  position: absolute;
+  top: 130px;
+  button {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 8px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .4;
+    }
+  }
+}
+
 .menu {
   height: 100%;
 }

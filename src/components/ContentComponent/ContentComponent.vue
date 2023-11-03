@@ -1,10 +1,10 @@
 <template>
   <main class="wrapper">
+    <div class="image-frame" v-if="searchObject">
+      <iframe :src="searchObject.embed_url" alt="" />
+    </div>
     <router-link v-for="gif in searchList" :to="'/gif/' + gif.id" :key="gif.id" class="element">
-      <img
-        :src="gif.images?.original?.url ? gif.images?.original?.url : gif?.embed_url"
-        :alt="gif.images?.original?.url ? 'Search Gif' : ''"
-      />
+      <img :src="gif?.images?.original?.url" alt="array picture">
     </router-link>
   </main>
 </template>
@@ -15,8 +15,19 @@ import { searchGifData } from '@/stores/modules/searchModule/search.service';
 import { getRandomWord } from '@/utils/randomWord';
 import { useScroll } from '@/hooks/useScroll'; 
 import { useStore } from 'vuex';
-const { searchList } = useDataList()
+import { ref, watch } from 'vue';
+import type { GifData } from '@/stores/modules/searchModule/types';
 const store = useStore()
+
+const { searchList } = useDataList()
+const searchObject = ref<GifData | null>(null);
+
+watch(
+  () => store.state.searchList.searchObject?.data, 
+  (newDataObject: GifData | null) => {
+    searchObject.value = newDataObject;
+  }
+);
 
 useScroll(searchList, searchGifData, getRandomWord);
 </script>
