@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import pngImage from '@/assets/logo/logo-default.png'
+import pngImage from '@/assets/logo/logo-default.jpg'
 import webpImage from '@/assets/logo/logo-default.webp'
 import { useRoute } from 'vue-router';
 

@@ -1,7 +1,7 @@
 <template>
-  <form class="wrapper">
-      <input v-model="searchText" type="text" id="search" name="search" />
-  </form>
+  <nav class="wrapper">
+    <input v-model="searchText" type="text" id="search" name="search" />
+  </nav>
 </template>
 
 <script setup lang="ts">

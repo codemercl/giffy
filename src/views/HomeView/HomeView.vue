@@ -5,7 +5,6 @@
       <component :is="LogoComponent" />
     </template>
     <template #menu>
-      <!-- <ShareButton :title="contentTitle" :text="contentText" :url="contentUrl" /> -->
       <component :is="SearchComponent"  />
     </template>
   </HeaderComponent>

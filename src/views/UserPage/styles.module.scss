@@ -35,3 +35,11 @@ main {
     }
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    overflow-x: hidden;
+    max-width: 300px;
+  }
+}

@@ -41,8 +41,8 @@
       a {
         display: inline-block;
         text-decoration: none;
-        margin-top: 30px;
-        font-size: 25px;
+        margin-top: 1.875rem;
+        font-size: 1.5625rem;
 
         span {
           color: wheat;
@@ -55,5 +55,21 @@
   .slider {
     display: flex;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    .container {
+      .content {
+        h1 {
+          font-size: 16px;
+        }
+
+        a {
+          font-size: 24px;
+        }
+      }
+    }
   }
 }

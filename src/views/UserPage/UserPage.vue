@@ -21,8 +21,6 @@
 <script setup lang="ts">
 import LogoComponent from '@/components/HeaderComponent/components/LogoComponent/LogoComponent.vue'
 import HeaderComponent from '@/components/HeaderComponent/HeaderComponent.vue'
-import type { CartData } from '@/stores/modules/getByIdModule/types'
-import { onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useStore } from 'vuex'
 
@@ -30,7 +28,6 @@ const route = useRoute()
 const store = useStore()
 
 const id = route.params.id
-
 const gifDatas = store.state.getById 
 
 </script>

@@ -8,7 +8,7 @@
     </div>
   </header>
   <div class="share-button">
-    <button @click="share">Share native API</button>
+    <button @click="share">Web share API (only mobile)</button>
   </div>
 </template>
 

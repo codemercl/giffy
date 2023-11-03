@@ -1,6 +1,6 @@
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 16.3125rem);
+  grid-template-columns: repeat(auto-fill, minmax(15.3125rem, 1fr));
   grid-auto-rows: 6.25rem;
   align-items: center;
   gap: 2rem;
@@ -17,6 +17,14 @@
     position: relative;
 
     img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    iframe {
       display: block;
       width: 100%;
       height: 100%;
