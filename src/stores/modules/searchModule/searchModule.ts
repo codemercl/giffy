@@ -35,7 +35,7 @@ const actions = {
         commit('setDataList', randomData);
       }
     } catch (error) {
-      console.error('An error occurred while executing the request:', error)
+      // console.error('An error occurred while executing the request:', error)
     }
   }
 }

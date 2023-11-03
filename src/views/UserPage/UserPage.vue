@@ -7,12 +7,12 @@
     </HeaderComponent>
     <main class="container" v-for="gif in gifData" :key="gif.id">
       <div class="pic">
-        <iframe :src="gif.user?.avatar_url" />
+        <iframe :src="gif?.user?.avatar_url" />
       </div>
       <div class="content">
         <h1>{{ gif?.user?.display_name }}</h1>
         <h2>@{{ gif?.user?.username }}</h2>
-        <a :href="gif.user?.profile_url">{{ gif.user?.profile_url }}</a>
+        <a :href="gif?.user?.profile_url">{{ gif.user?.profile_url }}</a>
       </div>
     </main>
   </section>

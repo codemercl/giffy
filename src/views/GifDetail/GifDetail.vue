@@ -6,7 +6,7 @@
       </div>
       <div class="content">
         <h1>{{ gif.title }}</h1>
-          <router-link :to="/user/ + gif.username + '/' + gif.id" class="element">
+          <router-link :to="/user/ + gif?.username + '/' + gif?.id" class="element">
           {{ gif.username }}
         </router-link>
       </div>
@@ -27,7 +27,7 @@ import { useDataList } from '@/hooks/useDataList.js';
 
 const route = useRoute()
 const store = useStore()
-const id = route.params.id
+const id = route.params?.id
 
 const gifData = ref<CartData[]>([])
 const { searchList } = useDataList();

@@ -27,7 +27,7 @@ const actions = {
       const data = await searchGifData( apiKey, rating, state.paramId)
       commit('setDataCart', data)
     } catch (error) {
-      console.error('An error occurred while executing the request:', error)
+      // ('An error occurred while executing the request:', error)
     }
   }
 }

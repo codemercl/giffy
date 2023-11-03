@@ -22,7 +22,7 @@ import type { GifData } from '@/stores/modules/searchModule/types'
 import { ref } from 'vue'
 
 const props = defineProps({
-  items: Array as () => GifData[] | undefined
+  items: Array as () => GifData[]
 })
 
 const currentIndex = ref(0)

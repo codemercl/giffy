@@ -27,7 +27,7 @@ export function useDataList() {
         const data = await searchGifData(searchText, apiKey, lang, rating, offset, limit);
         store.commit('setDataList', data);
       } catch (error) {
-        console.error('Error executing request:', error);
+        // console.error('Error executing request:', error);
       }
     });
 
