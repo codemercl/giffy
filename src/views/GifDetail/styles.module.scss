@@ -1,0 +1,52 @@
+.wrapper {
+  width: 100%;
+  height: calc(100vh - 40px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem;
+
+    .images {
+      max-width: 18.75rem;
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+
+    .content {
+      h1 {
+        font-size: 1.25rem;
+      }
+
+      .notFound {
+        margin: 0.625rem;
+        color: red;
+      }
+
+      a {
+        display: inline-block;
+        text-decoration: none;
+        margin-top: 30px;
+        font-size: 25px;
+
+        span {
+          color: wheat;
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+
+  .slider {
+    display: flex;
+    justify-content: center;
+  }
+}
