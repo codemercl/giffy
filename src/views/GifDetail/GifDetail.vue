@@ -6,7 +6,7 @@
       </div>
       <div class="content">
         <h1>{{ gif.title }}</h1>
-          <router-link :to="/user/ + gif?.username + '/' + gif?.id" class="element">
+        <router-link :to="/user/ + gif?.username + '/' + gif?.id" class="element">
           {{ gif.username }}
         </router-link>
       </div>
@@ -23,14 +23,14 @@ import { onMounted, ref } from 'vue'
 import Carousel from '@/common/Carousel/Carousel.vue'
 import { useRoute } from 'vue-router'
 import { useStore } from 'vuex'
-import { useDataList } from '@/hooks/useDataList.js';
+import { useDataList } from '@/hooks/useDataList.js'
 
 const route = useRoute()
 const store = useStore()
 const id = route.params?.id
 
 const gifData = ref<CartData[]>([])
-const { searchList } = useDataList();
+const { searchList } = useDataList()
 
 onMounted(async () => {
   store.commit('setParamId', id)

@@ -13,12 +13,12 @@
 import { useDataList } from '@/hooks/useDataList.js'
 import { searchGifData } from '@/stores/modules/searchModule/search.service';
 import { getRandomWord } from '@/utils/randomWord';
-// import { useScroll } from '@/hooks/useScroll'; 
+import { useScroll } from '@/hooks/useScroll'; 
 import { useStore } from 'vuex';
 const { searchList } = useDataList()
 const store = useStore()
 
-// useScroll(searchList, searchGifData, getRandomWord);
+useScroll(searchList, searchGifData, getRandomWord);
 </script>
 
 <style scoped>
