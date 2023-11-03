@@ -5,7 +5,7 @@ import UserPage from '../views/UserPage/UserPage.vue';
 
 const routes = [
   {
-    path: '/',
+    path: '/giffy',
     name: 'Home',
     component: HomeView
   },
