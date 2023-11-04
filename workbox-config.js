@@ -1,7 +1,7 @@
 export default {
-    globDirectory: 'dist',
+    globDirectory: '/',
     globPatterns: [
         '**/*/{css, wolf2, png, svg, js, ts, tsx, vue, scss}'
     ],
-    swDest: 'dist/sw.js'
+    swDest: 'sw.js'
 }
